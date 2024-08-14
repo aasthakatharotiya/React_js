@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO Form</title>
+    <link rel="stylesheet" href="maths.css" />
+</head>
+<body>
+    <h1>Bisection Method</h1>
+    <div>
+        <form id="taskForm" onsubmit="event.preventDefault(); executeBisection();">
+
+            <label for="decimal">Decimal Place :</label>
+            <input type="text" id="decimal" name="decimal" placeholder="Enter Decimal Place [in Number]" required>
+            <br><br>
+
+            <label for="formula">Formula:</label>
+            <select id="formula">
+                <option value="">Select Your Formula</option>
+                <option value="x^2-9x-1=0">x^2 - 9x - 1 = 0</option>
+                <option value="x^3-x-11=0">x^3 - x - 11 = 0</option>
+                <option value="x^log^x-1.2=0">x^log^x - 1.2 = 0</option>
+            </select>
+            <br><br>
+
+            <label for="root">Root:</label>
+            <select id="root">
+                <option value="">Select Your Root</option>
+                <option value="Positive">Positive</option>
+                <option value="Negative">Negative</option>
+            </select>
+            <br><br>
+            
+            <input type="submit" value="Submit"/>
+        </form>
+
+        <table id="create_tr">
+            <thead>
+                <tr>
+                    <th>Iteration</th>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>f(c)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Insert Row And Column -->
+            </tbody>
+        </table>
+    </div>
+
+<script>
+    function executeBisection()
+    {
+        const formula = document.getElementById("formula").value;
+        const root = document.getElementById("root").value;
+        const decimal = parseInt(document.getElementById("decimal").value);
+        let a, b;
+        
+        if (!formula || !root || isNaN(decimal))
+        {
+            alert("Please fill in all fields");
+            return;
+        }
+
+        if (root === "Positive")
+        {
+            a = 0;
+            b = 10;
+        }
+        else
+        {
+            a = -10;
+            b = -1;
+        }
+
+        const table = document.getElementById("create_tr").getElementsByTagName('tbody')[0];
+        table.innerHTML = ""; // Clear previous results
+
+        const f = (x) =>
+        {
+            switch (formula)
+            {
+                case 'x^2-9x-1=0': return x * x - 9 * x - 1;
+                case 'x^3-x-11=0': return x * x * x - x - 11;
+                case 'x^log^x-1.2=0': return Math.pow(x, Math.log10(x)) - 1.2;
+                default: return null;
+            }
+        };
+
+        const fa = f(a);
+        const fb = f(b);
+        if (fa * fb >= 0)
+        {
+            alert("Invalid initial guesses");
+            return;
+        }
+
+        let c, fc, iteration = 0;
+        while((b - a) >= Math.pow(10, -decimal))
+        {
+            c = (a + b) / 2;
+            fc = f(c);
+            const row = table.insertRow();
+            row.insertCell(0).innerHTML = ++iteration;
+            row.insertCell(1).innerHTML = a.toFixed(decimal);
+            row.insertCell(2).innerHTML = b.toFixed(decimal);
+            row.insertCell(3).innerHTML = c.toFixed(decimal);
+            row.insertCell(4).innerHTML = fc.toFixed(decimal);
+
+            if (fc === 0.0) break;
+            if (fc * fa < 0) b = c;
+            else a = c;
+        }
+    }
+</script>
+</body>
+</html>

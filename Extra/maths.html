@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO Form</title>
+    <link rel="stylesheet" href="maths.css" />
+  </head>
+  <body>
+    <!-- Dont make any changes here -->
+    <h1>Bisection Method</h1>
+    <div>
+      <form id="taskForm">
+
+        <label for="decimal">Decimal Place :</label>
+        <input type="text" id="decimal" name="decimal" placeholder="Enter Decimal Place [in Number]" required>
+        <br><br>
+
+        <label for="formula">Formula:</label>
+        <select id="formula">
+            <option value="">Select Your Formula</option>
+            <option value="x^2-9x-1=0">x^2 - 9x - 1 = 0</option>
+            <option value="x^3-x-11=0">x^3 - x - 11 = 0</option>
+            <option value="x^log^x-1.2=0">x^log^x - 1.2 = 0</option>
+        </select>
+        <br><br>
+
+        <label for="root">Root:</label>
+        <select id="root">
+            <option value="">Select Your Root</option>
+            <option value="Positive">Positive</option>
+            <option value="Negative">Negative</option>
+        </select>
+        <br><br>
+        
+        <input type="submit" onclick="clk_submit()"/>
+      </form>
+
+
+      <table id="create_tr">
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Iteration</th>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>f(c)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- Insert Row And Column -->
+        </tbody>
+
+      </table>
+
+    </div>
+    <!-- <h1 id="ans"></h1> -->
+  </body>
+</html>
+
+<script src="maths.js"></script>
