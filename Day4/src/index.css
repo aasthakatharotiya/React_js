@@ -1,0 +1,31 @@
+body{
+  height: 95vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+button{
+  height: 50px;
+  padding: 0px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+button:hover{
+  background: none;
+  border: 2px solid;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.flex_main{
+  display: flex;
+  gap: 50px;
+  /* border: 2px solid; */
+}
+span{
+  font-size: 20px;
+}
