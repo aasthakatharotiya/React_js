@@ -1,0 +1,363 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+} */
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  .form_main{
+    /* border: 2px solid; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+  }
+}
+
+::-webkit-scrollbar{
+  width: 0%;
+}
+
+
+/* #Mobile_Main,
+#Food_Main,
+#Plants_Main{
+  display: none;
+} */
+
+
+form{
+  width: 480px;
+  padding: 15px;
+  padding-top: 0px;
+  border-radius: 10px;
+  border: 2px solid;
+
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+
+}
+.main{
+  /* line-height: 0px; */
+
+  h3{
+    margin-top: 20px;
+    font-size: 20px;
+    /* border: 2px solid; */
+  }
+
+  span{
+    color: red;
+  }
+
+  input{
+    height: 33px;
+    width: 100%;
+  }
+
+  select{
+    width: 100%;
+    height: 35px;
+  }
+
+  textarea{
+    width: 99%;
+  }
+
+  .name_flex{
+    /* margin-top: -15px; */
+    display: flex;
+    gap: 20px;
+    width: 100%;
+
+    .first_name,
+    .last_name{
+      width: 50%;
+    }
+  }
+
+
+  .call{
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .call_head{
+      width: fit-content;
+      padding: 0px 15px;
+      border: 1px solid gray;
+      height: 90%;
+    }
+
+    div{
+      height: 100%;
+      width: 100%;
+      /* border: 2px solid; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input{
+        height: 90%;
+        width: 100%;
+      }
+    }
+  }
+
+
+  .main_flex{
+    display: flex;
+    gap: 20px;
+
+    .GR_ID,
+    .state{
+      width: 50%;
+    }
+  }
+
+}
+.form_btn{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+
+  button{
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    padding: 0px 20px;
+    font-size: 20px;
+  }
+
+  .submit_btn{
+    background-color: rgb(255, 111, 0);
+  }
+  .reset_btn{
+    background-color: rgb(4, 140, 4);
+  }
+
+  .submit_btn:hover{
+    border: 3px solid rgb(255, 111, 0);
+    color: rgb(255, 111, 0);
+    background: none;
+    transition: 1s;
+  }
+  .reset_btn:hover{
+    border: 3px solid rgb(4, 140, 4);
+    color: rgb(17, 107, 17);
+    background: none;
+    transition: 1s;
+  }
+}
+
+
+#food,
+#electronic,
+#cloth,
+#gift{
+  height: 70vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  /* border: 2px solid; */
+
+  .food_col,
+  .electronic_col,
+  .cloth_col,
+  .gift_col{
+    /* border: 2px solid red; */
+
+    .pr_food_div,
+    .pr_electronic_div,
+    .pr_cloth_div,
+    .pr_gift_div{
+      border: 1px solid gray;
+      height: 487px;
+
+      .food_img{
+        height: 55%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid blue; */
+
+        img{
+          height: 100%;
+          width: 120%;
+        }
+      }
+
+      .electronic_img,
+      .cloth_img,
+      .gift_img{
+        height: 55%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid blue; */
+
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .food_text,
+      .electronic_text,
+      .cloth_text,
+      .gift_text{
+        height: 45%;
+        padding-top: 8px;
+        /* border: 2px solid red; */
+
+        p{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+
+          span{
+            font-size: 22px;
+            color: rgb(16, 209, 16);
+            font-weight: bolder;
+          }
+          del{
+            color: rgb(153, 152, 152);
+            margin-top: 3px;
+            font-size: 19px;
+          }
+        }
+        span{
+          color: red;
+          font-size: 18px;
+        }
+        button{
+          height: 50px;
+          padding: 0px 20px;
+          margin-top: 20px;
+          font-size: 20px;
+          background-color: rgb(249, 0, 120);
+          /* background-color: rgb(249, 0, 100); */
+          border: none;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  
+}
+
+
+#btn_click,
+#btn_click_electronic,
+#btn_click_cloth,
+#btn_click_gift{
+  /* display: none; */
+
+  #short_form{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    /* border: 2px solid red; */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  
+    #star{
+      color: gold;
+      font-size: 30px;
+      margin-right: 20px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+
+    .short_form_btn{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      #added,
+      #cancel,
+      #added_electronic,
+      #cancel_electronic,
+      #added_cloth,
+      #cancel_cloth,
+      #added_gift,
+      #cancel_gift{
+        margin-top: 20px;
+        height: 50px;
+        padding: 0px 20px;
+        border: none;
+        font-size: 20px;
+        border-radius: 5px;
+      }
+  
+      #added,
+      #added_electronic,
+      #added_cloth,
+      #added_gift{
+        background-color: rgb(255, 111, 0);
+      }
+      #cancel,
+      #cancel_electronic,
+      #cancel_cloth,
+      #cancel_gift{
+        background-color: rgb(4, 140, 4);
+      }
+  
+      #added:hover,
+      #added_electronic:hover,
+      #added_cloth:hover,
+      #added_gift:hover{
+        border: 2px solid rgb(255, 111, 0);
+        color: rgb(255, 111, 0);
+        background: none;
+        transition: 1s;
+      }
+      #cancel:hover,
+      #cancel_electronic:hover,
+      #cancel_cloth:hover,
+      #cancel_gift:hover{
+        border: 2px solid rgb(4, 140, 4);
+        color: rgb(4, 140, 4);
+        background: none;
+        transition: 1s;
+      }
+    }
+  }
+}
