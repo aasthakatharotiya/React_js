@@ -1,0 +1,333 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  /* border: 2px solid blue; */
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.main_login_bg {
+  /* border: 2px solid red; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-image: url('https://media.licdn.com/dms/image/v2/C5622AQHLiGjAigv82g/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1650287382254?e=2147483647&v=beta&t=js5usFzjPaovFNFibOyAn4IBLLbxAzEm-b351jO38k8'); */
+  background-image: url('https://static.ladipage.net/63b3d7bebcd4e8001229d39c/yoe67w-20240128030542-245qv.gif');
+  /* background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Security_Key.gif'); */
+  /* background-image: url('https://64.media.tumblr.com/edf5005b1a556f257fa8122d33c8affa/tumblr_neanocJacw1qgopyyo1_640.gif'); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .main_form {
+    width: 30%;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .input_width {
+      width: 60%;
+      /* border: 2px solid; */
+      text-align: left;
+
+      h3 {
+        height: 15px;
+      }
+    }
+
+    input {
+      width: 97%;
+      height: 35px;
+      border-radius: 4px;
+      border: 1px solid #b6b4b4;
+      transition: all 0.3s;
+      color: black;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #4a90e2;
+      box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+    }
+
+    ::placeholder {
+      padding-left: 5px;
+    }
+  }
+
+
+
+
+
+  .main_form_css {
+    width: 27%;
+    border-radius: 10px;
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(57, 57, 57, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+
+    .face_btn{
+      height: 125px;
+      width: 125px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: none;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    
+      img{
+        height: 230%;
+        width: 330%;
+      }
+    }
+
+    h2{
+      margin-top: -0px;
+      font-size: 30px;
+    }
+
+    .input_width {
+      width: 70%;
+      height: 50px;
+      /* border: 2px solid; */
+      text-align: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid;
+      margin-bottom: 20px;
+
+      h3 {
+        width: 10%;
+        font-size: 22px;
+        /* border: 2px solid; */
+      }
+    }
+
+    .login_btn{
+      width: 70%;
+      margin-top: 10px;
+      height: 50px;
+      border-radius: 30px;
+      color: white;
+      border: none;
+      font-size: 20px;
+      background: linear-gradient(90deg, #57a3f4, #0152a8);
+      cursor: pointer;
+      /* background: linear-gradient(to bottom, rgb(142, 169, 236), rgb(52, 77, 140)); */
+    }
+
+    .login_btn:hover {
+      background: linear-gradient(90deg, #0056b3, #003d80);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .login_btn:active {
+      transform: scale(0.98);
+      background: linear-gradient(90deg, #003d80, #002653);
+    }
+
+
+
+    .google_btn {
+      width: 70%;
+      height: 50px;
+      cursor: pointer;      
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 5px;
+      padding-right: 0%;
+      border-radius: 30px;
+      overflow: hidden;
+      background: none;
+      color: white;
+      border: 1px solid rgb(194, 194, 194);
+
+      .btn_flex {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .google_img {
+          /* border: 2px solid; */
+          width: 14%;
+          height: 100%;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .google_text {
+          /* border: 2px solid; */
+          width: 85%;
+          height: 100%;
+          font-size: 19px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .google_btn:hover {
+      background-color: black;
+      border: none;
+      transition: 1s;
+    }
+
+    input {
+      width: 97%;
+      height: 35px;
+      border-radius: 4px;
+      border: none;
+      background: none;
+      font-size: 22px;
+      /* border: 1px solid #b6b4b4;
+      color: black; */
+    }
+
+    input:focus {
+      outline: none;
+      /* border-color: #4a90e2; */
+      /* box-shadow: 0 0 8px rgba(74, 144, 226, 0.2); */
+    }
+
+    ::placeholder {
+      /* padding-left: 5px; */
+      font-size: 15px;
+      color: rgb(186, 185, 185);
+    }
+
+  }
+}
+
+
+
+
+
+.main_dashbord{
+  /* border: 2px solid; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('https://www.webplause.com/images/gads1.gif');
+  /* background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/ask_a_techspert_header_1.gif'); */
+  /* background-image: url('https://wpcdn.platomedical.com/plato/wp-content/uploads/2020/03/17120402/sso.gif'); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 90% 95%;
+  background-position: 50% 95%;
+
+  .record_css{
+    color: white;
+    padding: 20px;
+    background: rgba(61, 61, 61, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    h2{
+      .text_color {
+        background: linear-gradient(to right, #007BFF, #00BFFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 27px;
+      }
+      
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+} */
